@@ -4,7 +4,7 @@
 
     <groupId>io.murrer</groupId>
     <artifactId>release-plugin-test</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.1</version>
 
     <properties>
         <maven.compiler.source>1.10</maven.compiler.source>
