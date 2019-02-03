@@ -12,25 +12,32 @@
         <maven.compiler.source>1.10</maven.compiler.source>
         <maven.compiler.target>1.10</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <git.project.url>git@github.com:mamu7211/release-plugin-test.git</git.project.url>
+        <nexus.server>localhost:8987</nexus.server>
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
+
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
+
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -53,4 +60,20 @@
         </plugins>
     </build>
 
+    <scm>
+        <connection>scm:git:${git.project.url}</connection>
+        <url>scm:git:${git.project.url}</url>
+        <developerConnection>scm:git:${git.project.url}</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://${nexus.server}/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://${nexus.server}/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 </project>
