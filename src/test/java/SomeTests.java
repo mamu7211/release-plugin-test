@@ -6,6 +6,6 @@ public class SomeTests {
 
     @Test
     public void testNothing(){
-        assertTrue( true,"Just a fake...");
+        assertTrue( false,"Just a fake...");
     }
 }
