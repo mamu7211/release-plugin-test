@@ -4,7 +4,7 @@
 
     <groupId>io.murrer</groupId>
     <artifactId>release-plugin-test</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.3-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.10</maven.compiler.source>
@@ -72,7 +72,7 @@
         <connection>scm:git:${git.project.url}</connection>
         <url>scm:git:${git.project.url}</url>
         <developerConnection>scm:git:${git.project.url}</developerConnection>
-        <tag>v0.2.2</tag>
+        <tag>v0.2.1</tag>
     </scm>
 
     <distributionManagement>
